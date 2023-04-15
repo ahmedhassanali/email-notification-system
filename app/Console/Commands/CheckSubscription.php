@@ -28,7 +28,6 @@ class CheckSubscription extends Command
     public function handle()
     {
         $subscriptions = Subscription::expiresToday()->get();
-        
         foreach ($subscriptions as $subscription) {
             $customer = $subscription->customer;
             $customer->notify(new SubscriptionEndingSoon($subscription));

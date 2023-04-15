@@ -16,12 +16,12 @@ class CustomerSeeder extends Seeder
         $customers = [
             [
                 'name' => 'John Doe',
-                'email' => 'johndoe@example.com',
+                'email' => 'engahmeedhassanali@gmail.com',
                 'password' => bcrypt('secret'),
             ],
             [
                 'name' => 'Jane Doe',
-                'email' => 'janedoe@example.com',
+                'email' => 'ahmeedhassanali@outlock.com',
                 'password' => bcrypt('secret'),
             ],
             // add more customers as needed

@@ -27,7 +27,6 @@ class SubscriptionEndingSoon extends Notification
         $this->fromEmail ='test$ah.com';
         $this->mailer ='smtp';
         $this->subscription = $subscription;
-
     }
 
     /**

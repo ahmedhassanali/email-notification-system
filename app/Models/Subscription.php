@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Subscription extends Model
 {
     use HasFactory;
-    protected $fillable = ['customer_id', 'start_date', 'end_date'];
+    protected $fillable = ['customer_id', 'start_date', 'expire_date'];
 
     public function customer()
     {
@@ -18,6 +18,6 @@ class Subscription extends Model
 
     public function scopeExpiresToday($query)
     {
-        return $query->where('end_date', '=', Carbon::now()->addDay());
+        return $query->where('expire_date', '<=', Carbon::now()->addDay());
     }
 }
